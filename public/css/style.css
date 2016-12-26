@@ -1,0 +1,135 @@
+body {
+    background-color: beige;
+}
+
+h2 {
+    color: black;
+}
+
+textarea {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border-color: black;
+    border-radius: 10px;
+}
+
+li,
+a,
+a:hover{
+    cursor: pointer;
+    color: darkgrey;
+    text-decoration: none;
+    padding: 10px 0px;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+label {
+    color: black;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+img {
+    max-width: 300px;
+}
+
+/*Navigation*/
+.menu {
+    background-color: black;
+}
+
+.menu ul,
+.menu a {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.active a {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    color: white;
+}
+
+.sign a {
+    color: white;
+    border-left: 1px darkgray solid;
+}
+
+/*Content*/
+.product,
+.reviews {
+    font-size: 20px;
+}
+
+.title {
+    padding: 10px 0px;
+    border-bottom: 2px darkgray solid;
+    margin-bottom: 20px;
+}
+
+.text_product {
+    padding-top: 10px;
+    border-top: 2px darkgray solid;
+    margin-top: 20px;
+    word-wrap: break-word;
+}
+
+#origin {
+    margin-top: 16px;
+}
+
+.rate {
+    float: right;
+}
+
+.review {
+    padding: 10px 0px;
+    border-bottom: 2px black solid;
+    margin-bottom: 16px;
+    word-wrap: break-word;
+}
+
+.text_rewiew {
+    border-left: 2px darkgrey solid;
+    padding-left: 10px;
+}
+
+/*Form auth*/
+.modal-content {
+    background-color: darkgrey;
+}
+
+.modal-dialog {
+    margin: 10% auto;
+}
+
+.modal-dialog input {
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border-color: darkgrey;
+}
+
+.close {
+    float: right;
+}
+
+.message {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
