@@ -1,13 +1,14 @@
 angular.module("ProdApp", ['ngRateIt'])
     .controller("TitlesCtrl", function ($scope, $http) {
         var url = "//localhost:3000";
-        $http.get(url + "/api/products")
+        var productsAPI = url + "/api/products/";
+        var reviewsAPI = url + "/api/reviews/";
+        $http.get(productsAPI)
             .then(function (data) {
                 $scope.titles = data.data;
             })
         $scope.id = function id(idProduct) {
-            var reviewsAPI = url + "/api/reviews/" + idProduct;
-            $http.get(reviewsAPI)
+            $http.get(reviewsAPI + idProduct)
                 .then(function (data) {
                     $scope.reviews = data.data;
                 })
@@ -16,16 +17,15 @@ angular.module("ProdApp", ['ngRateIt'])
             $scope.activeMenu = titles
         }
         $scope.postReview = function (idProduct, author_review, text_review, rate_review) {
-            var reviewAPI = url + "/api/reviews/";
             var data = {
                 id_prod: idProduct,
                 author: author_review,
                 rate: rate_review,
                 text: text_review
             }
-            $http.post(reviewAPI, data)
+            $http.post(reviewsAPI, data)
                 .then(function () {
-                    $http.get(reviewAPI + idProduct)
+                    $http.get(reviewsAPI + idProduct)
                         .then(function (data) {
                             $scope.reviews = data.data;
                         })
