@@ -16,9 +16,9 @@ li,
 a,
 a:hover{
     cursor: pointer;
-    color: darkgrey;
+    color: #444;
     text-decoration: none;
-    padding: 10px 0px;
+    padding: 6px 0px 5px;
     -webkit-transition-duration: 1s;
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
@@ -35,9 +35,16 @@ img {
 }
 
 /*Navigation*/
-.menu {
-    background-color: black;
-    margin-bottom: 10px;
+.nav {
+    background-color: #ffcd00;
+    border-top: 25px solid #113d64;
+    border-bottom: 8px solid #113d64;
+}
+
+.logo {
+    float: left;
+    height: 51px;
+    padding-left: 40px;
 }
 
 .menu ul,
@@ -50,9 +57,9 @@ img {
 }
 
 .active a {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 0px;
-    color: white;
+    color: #000;
 }
 
 /*Content*/

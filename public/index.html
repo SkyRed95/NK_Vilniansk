@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>RESTfull_Products</title>
+    <title>НАЦІОНАЛЬНИЙ КОРПУС | ВІЛЬНЯНСЬК</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/ng-rateit.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,13 +13,18 @@
 <body>
 <div ng-app="ProdApp">
     <div class="products" ng-controller="TitlesCtrl">
-        <div class="menu">
-            <ul ng-repeat="ProductTitle in titles">
-                <li ng-class="{active : activeMenu === ProductTitle}">
-                    <a ng-click="setActive(ProductTitle); id(ProductTitle._id)">{{ProductTitle.title}}</a>
-                </li>
-            </ul>
-        </div>
+        <nav class="nav">
+            <div class="logo">
+                <img src="../img/logo-small.png">
+            </div>
+            <div class="menu">
+                <ul ng-repeat="ProductTitle in titles">
+                    <li ng-class="{active : activeMenu === ProductTitle}">
+                        <a ng-click="setActive(ProductTitle); id(ProductTitle._id)">{{ProductTitle.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <div class="container" ng-repeat="ProductTitle in titles" ng-show="activeMenu === ProductTitle">
             <div class="col-xs-6 product">
                 <div class="title">{{ProductTitle.title}}</div>
