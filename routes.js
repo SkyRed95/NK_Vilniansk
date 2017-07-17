@@ -8,4 +8,6 @@ module.exports = function(app){
     // app.put('/pages/:id', pages.update);
     // app.delete('/pages/:id', pages.delete);
 
+    app.get('/import', pages.import);
+
 }

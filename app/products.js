@@ -1,7 +1,7 @@
-angular.module("ProdApp", ['ngRateIt'])
+angular.module("ProdApp", [])
     .controller("TitlesCtrl", function ($scope, $http) {
         var url = "//localhost:3000";
-        var productsAPI = url + "/api/products/";
+        var productsAPI = url + "/pages/";
         var reviewsAPI = url + "/api/reviews/";
         $http.get(productsAPI)
             .then(function (data) {

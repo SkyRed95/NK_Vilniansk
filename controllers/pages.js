@@ -10,3 +10,12 @@ exports.findAll = function(req, res){
 // exports.add = function() {};
 // exports.update = function() {};
 // exports.delete = function() {};
+
+exports.import = function(req, res){
+    Page.create(
+        { "title": "Тест", "img": "Зображення", "body": "Тест", "url": "test-url" }
+        , function (err) {
+            if (err) return console.log(err);
+            return res.send(202);
+        });
+};

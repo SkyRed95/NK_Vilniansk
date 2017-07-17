@@ -1,5 +1,5 @@
 {
-  "name": "RESTfull_Products",
+  "name": "NK_Vilniansk",
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
@@ -21,11 +21,11 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SkyRed95/RESTfull_Products.git"
+    "url": "git+https://github.com/SkyRed95/NK_Vilniansk.git"
   },
   "bugs": {
-    "url": "https://github.com/SkyRed95/RESTfull_Products/issues"
+    "url": "https://github.com/SkyRed95/NK_Vilniansk/issues"
   },
-  "homepage": "https://github.com/SkyRed95/RESTfull_Products#readme",
+  "homepage": "https://github.com/SkyRed95/NK_Vilniansk#readme",
   "description": ""
 }

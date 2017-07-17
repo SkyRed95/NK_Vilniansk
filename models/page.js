@@ -4,7 +4,11 @@ var mongoose = require('mongoose'),
 var PageSchema = new Schema({
     title: String,
     img: String,
-    text: String
+    body: String,
+    url: String
+},
+{
+    versionKey: false
 });
 
 mongoose.model('Page', PageSchema);
