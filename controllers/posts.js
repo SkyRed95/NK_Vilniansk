@@ -1,8 +1,8 @@
 var mongoose = require('mongoose'),
-    Page = mongoose.model('Page');
+    Post = mongoose.model('Post');
 
 exports.findAll = function(req, res){
-    Page.find({},function(err, results) {
+    Post.find({},function(err, results) {
         return res.send(results);
     });
 };
@@ -12,7 +12,7 @@ exports.findAll = function(req, res){
 // exports.delete = function() {};
 
 exports.import = function(req, res){
-    Page.create(
+    Post.create(
         { "title": "Тест", "img": "Зображення", "body": "Тест", "url": "test-url" }
         , function (err) {
             if (err) return console.log(err);

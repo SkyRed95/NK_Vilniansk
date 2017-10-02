@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var PageSchema = new Schema({
+var PostSchema = new Schema({
     title: String,
     img: String,
     body: String,
@@ -11,4 +11,4 @@ var PageSchema = new Schema({
     versionKey: false
 });
 
-mongoose.model('Page', PageSchema);
+mongoose.model('Post', PostSchema);

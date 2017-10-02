@@ -6,29 +6,29 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="../node_modules/angular/angular.min.js"></script>
-    <script src="../app/products.js"></script>
+    <script src="../app/postsApp.js"></script>
 </head>
 <body>
-<div ng-app="ProdApp">
-    <div class="products" ng-controller="TitlesCtrl">
-        <nav class="nav">
+<div ng-app="PostsApp">
+    <div ng-controller="TitlesCtrl">
+        <nav class="header">
             <div class="logo">
                 <img src="../img/logo-small.png">
                 <img id="logo-name" src="../img/logo-name.png">
             </div>
             <div class="menu">
-                <ul ng-repeat="ProductTitle in titles">
-                    <li ng-class="{active : activeMenu === ProductTitle}">
-                        <a ng-click="setActive(ProductTitle); id(ProductTitle._id)">{{ProductTitle.title}}</a>
+                <ul>
+                    <li>
+                        <a href="index.html">Головна</a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div class="container" ng-repeat="ProductTitle in titles">
-            <div class="col-xs-12 pages">
-                <div class="title">{{ProductTitle.title}}</div>
-                <img ng-src="//project-epsilon.s3-eu-west-1.amazonaws.com/alex-static/{{ProductTitle.img}}">
-                <div class="body_page">{{ProductTitle.text}}</div>
+        <div class="container" ng-repeat="PostTitle in titles">
+            <div class="col-xs-12 posts">
+                <a class="title" href="page.html">{{PostTitle.title}}</a>
+                <img ng-src="//project-epsilon.s3-eu-west-1.amazonaws.com/alex-static/{{PostTitle.img}}">
+                <div class="body_post">{{PostTitle.body}}</div>
             </div>
         </div>
     </div>

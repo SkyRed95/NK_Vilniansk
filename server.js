@@ -18,7 +18,7 @@ db.once('open', function callback() {
     console.log('Connected!')
 });
 
-require('./models/page');
+require('./models/post');
 require('./routes')(app);
 
 app.listen(3000);

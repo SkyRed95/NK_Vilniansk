@@ -1,14 +1,10 @@
 li,
 a,
-a:hover{
-    cursor: pointer;
+a:hover {
     color: #444;
     text-decoration: none;
     padding: 6px 0px 5px;
-    -webkit-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    transition-duration: 1s;
+    list-style-type: none;
 }
 
 h2,
@@ -20,11 +16,12 @@ img {
     max-width: 300px;
 }
 
-/*Navigation*/
-.nav {
+/*Header*/
+.header {
     background-color: #ffcd00;
     border-top: 25px solid #113d64;
     border-bottom: 8px solid #113d64;
+    margin-bottom: 10px;
 }
 
 .logo {
@@ -39,33 +36,19 @@ img {
 
 .menu ul,
 .menu a {
-    list-style-type: none;
     display: inline-block;
-    vertical-align: top;
     margin: 0px;
     font-size: 20px;
 }
 
-.active a {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    color: #000;
-}
-
 /*Content*/
-.pages {
+.posts {
     font-size: 20px;
 }
 
-.title {
-    padding: 0px 0px 10px;
+.body_post {
+    padding-bottom: 10px;
     border-bottom: 2px darkgray solid;
     margin-bottom: 20px;
-}
-
-.body_page {
-    padding-top: 10px;
-    border-top: 2px darkgray solid;
-    margin-top: 20px;
     word-wrap: break-word;
 }
