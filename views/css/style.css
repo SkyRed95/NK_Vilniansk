@@ -3,7 +3,7 @@ a,
 a:hover {
     color: #444;
     text-decoration: none;
-    padding: 6px 0 5px;
+    padding: 6px 0;
     list-style-type: none;
 }
 
@@ -38,7 +38,9 @@ img {
 .menu a {
     display: inline-block;
     margin: 0;
-    font-size: 20px;
+    font-size: 19px;
+    font-family: aa-duke;
+    text-transform: uppercase;
 }
 
 /*Content*/
