@@ -1,7 +1,8 @@
-var express = require('express');
-var mongoose = require('mongoose');
-
-var app = express();
+var express = require('express'),
+    mongoose = require('mongoose'),
+    mongoUri = 'mongodb://localhost/nk_db',
+    db = mongoose.connection;
+    app = express();
 
 app.all('*', function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -10,9 +11,7 @@ app.all('*', function(req, res, next) {
     next();
 });
 
-var mongoUri = 'mongodb://localhost/nk_db';
 mongoose.connect(mongoUri, { useMongoClient: true });
-var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
     console.log('Connected!')

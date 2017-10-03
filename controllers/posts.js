@@ -1,18 +1,24 @@
 var mongoose = require('mongoose'),
-    Post = mongoose.model('Post');
+    post = mongoose.model('Post');
 
 exports.findAll = function(req, res){
-    Post.find({},function(err, results) {
+    post.find({},function(err, results) {
         return res.send(results);
     });
 };
-// exports.findById = function() {};
+
+exports.findById = function(req, res) {
+    var id_posts = req.params._id;
+    post.find({'_id':id_posts},function (err, results) {
+        return res.send(results);
+    })
+};
 // exports.add = function() {};
 // exports.update = function() {};
 // exports.delete = function() {};
 
 exports.import = function(req, res){
-    Post.create(
+    post.create(
         { "title": "Тест", "img": "Зображення", "body": "Тест", "url": "test-url" }
         , function (err) {
             if (err) return console.log(err);

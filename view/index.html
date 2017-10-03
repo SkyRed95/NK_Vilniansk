@@ -10,23 +10,23 @@
 </head>
 <body>
 <div ng-app="PostsApp">
-    <div ng-controller="TitlesCtrl">
-        <nav class="header">
-            <div class="logo">
-                <img src="../img/logo-small.png">
-                <img id="logo-name" src="../img/logo-name.png">
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Головна</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <nav class="header">
+        <div class="logo">
+            <img src="../img/logo-small.png">
+            <img id="logo-name" src="../img/logo-name.png">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Головна</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div ng-controller="AllPostsCtrl">
         <div class="container" ng-repeat="PostTitle in titles">
             <div class="col-xs-12 posts">
-                <a class="title" href="page.html">{{PostTitle.title}}</a>
+                <a class="title" href="post.html" ng-click="id(PostTitle._id)">{{PostTitle.title}}</a>
                 <img ng-src="//project-epsilon.s3-eu-west-1.amazonaws.com/alex-static/{{PostTitle.img}}">
                 <div class="body_post">{{PostTitle.body}}</div>
             </div>

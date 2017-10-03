@@ -1,13 +1,22 @@
-angular.module("PostsApp", [])
-    .controller("TitlesCtrl", function ($scope, $http) {
-        var url = "//localhost:3000",
-            postsAPI = url + "/posts/";
+var app = angular.module("PostsApp", []),
+    url = "//localhost:3000",
+    postsAPI = url + "/posts/";
 
-        $http.get(postsAPI)
+app.controller("AllPostsCtrl", function ($scope, $http) {
+    $http.get(postsAPI)
+        .then(function (data) {
+            $scope.titles = data.data;
+        })
+    $scope.id = function id(idPost) {
+        $http.get(postsAPI + idPost)
             .then(function (data) {
-                $scope.titles = data.data;
+                $scope.posts = data.data;
             })
-        $scope.setActive = function (titles) {
-            $scope.activeMenu = titles
-        }
-    });
+    }
+});
+app.controller("PostCtrl", function ($scope, $http) {
+    $http.get(postsAPI + idPost)
+        .then(function (data) {
+            $scope.titles = data.data;
+        })
+})
