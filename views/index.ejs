@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>НАЦІОНАЛЬНИЙ КОРПУС | ВІЛЬНЯНСЬК</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/views/css/style.css">
+</head>
+<body>
+<div ng-app="PostsApp">
+    <nav class="header">
+        <div class="logo">
+            <img src="../img/logo-small.png">
+            <img id="logo-name" src="../img/logo-name.png">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="/">Головна</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <% for(var i = 0; i < results.length; i++) { %>
+        <div class="col-xs-12 posts">
+            <a class="title" href="/post/<%= (i + 1)%>"><%= results[i].title %></a>
+            <img ng-src="//project-epsilon.s3-eu-west-1.amazonaws.com/alex-static/<%= results[i].img %>">
+            <div class="body_post"><%= results[i].body %></div>
+        </div>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

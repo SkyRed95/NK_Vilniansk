@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
-    "angular": "^1.6.1",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "ejs": "^2.5.7",

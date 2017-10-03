@@ -4,6 +4,9 @@ var express = require('express'),
     db = mongoose.connection;
     app = express();
 
+app.set("view engine", "ejs");
+app.use("/",express.static(__dirname + "/"));
+
 app.all('*', function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -16,8 +19,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
     console.log('Connected!')
 });
-
 require('./models/post');
 require('./routes')(app);
 
-app.listen(3000);
+app.listen(3003);
