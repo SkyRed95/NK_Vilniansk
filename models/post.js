@@ -4,8 +4,7 @@ var mongoose = require('mongoose'),
 var PostSchema = new Schema({
     title: String,
     img: String,
-    body: String,
-    url: String
+    content: String
 },
 {
     versionKey: false

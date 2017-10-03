@@ -23,9 +23,9 @@
     </nav>
     <div class="container">
         <div class="col-xs-12 posts">
-            <a class="title" href="post.ejs"><%= post.title %></a>
+            <h1 class="title"><%= post.title %></h1>
             <img ng-src="//project-epsilon.s3-eu-west-1.amazonaws.com/alex-static/<%= post.img %>">
-            <div class="body_post"><%= post.body %></div>
+            <div class="body_post"><%= post.content %></div>
         </div>
     </div>
 </div>

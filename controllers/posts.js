@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 exports.findAll = function (req, res) {
     post.find({}, function (err, results) {
-        res.render('index', {results});
+        res.render('index', {posts: results});
     });
 };
 
@@ -19,7 +19,7 @@ exports.findById = function (req, res) {
 
 exports.import = function (req, res) {
     post.create(
-        {"title": "Тест", "img": "Зображення", "body": "Тест", "url": "test-url"}
+        {"title": "Тест", "img": "Зображення", "content": "Тест"}
         , function (err) {
             if (err) return console.log(err);
             return res.send(202);
